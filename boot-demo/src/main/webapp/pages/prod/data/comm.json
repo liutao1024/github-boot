@@ -1,0 +1,31 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+			"comm_cd" : "1",
+			"comm_name" : "广农商一号",
+			"prod_cd" : "1",
+			"ver":"01",
+			"class_cd":"05",
+			"status":"生效",
+			"up_property_flag":"Y",
+			"pre_up_dt":"2015 6-22",
+			"real_up_dt":"2025 6-22",
+			"up_user":"sys",
+			"real_down_dt":""
+		}, {
+			"comm_cd" : "2",
+			"comm_name" : "广农商二号",
+			"prod_cd" : "1",
+			"ver":"01",
+			"class_cd":"05",
+			"status":"生效",
+			"up_property_flag":"Y",
+			"pre_up_dt":"2015 6-22",
+			"real_up_dt":"2025 6-22",
+			"up_user":"sys",
+			"real_down_dt":""
+		}
+	]
+}

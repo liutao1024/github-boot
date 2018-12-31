@@ -1,0 +1,6 @@
+{
+	"start_date":"2015-01-15 8:00",
+	"everytime_amt":[{"min_amt":"100"},{"max_amt":"1000000"}],
+	"rate":"6.5",
+	"period" : [{"period_value":"63"},{"period_unit":"天"}]	
+}

@@ -1,0 +1,17 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+			"abstract_cd" : "1",
+			"property_cd" : "01",
+			"property_type" : "期限",
+			"sortno" : "1"
+		}, {
+			"abstract_cd" : "1",
+			"property_cd" : "02",
+			"property_type" : "收益率",
+			"sortno" : "2"
+		}
+	]
+}

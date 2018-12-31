@@ -1,0 +1,13 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+			"abstract_cd" : "3",
+			"abstract_name" : "定活通系列"
+		}, {
+			"abstract_cd" : "4",
+			"abstract_name" : "活期"
+		}
+	]
+}

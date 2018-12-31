@@ -1,0 +1,8 @@
+{
+	"period" : [{"period_value":"63"},{"period_unit":"天"}],
+	"rate":"6.5",
+	"guar_cd":[{"value":"住房抵押"},{"value":"信用"}],
+	"installment_cd":[{"value":"分期还款,本息12期"},{"value":"分期还款,本息24期"}],
+	"start_date":"2015年  1月12日 8:00",
+	"everytime_amt":[{"min_amt":"100"},{"max_amt":"1000000"}]	
+}

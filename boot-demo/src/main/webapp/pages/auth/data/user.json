@@ -1,0 +1,24 @@
+{   "sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+	        "register_cd":"2001",
+	        "branch_cd":"2001",
+			"user_cd" : "user_03",
+			"user_name" : "高木",
+			"user_certno":"08615056564321",
+			"user_telno":"13843888888888",
+			"user_email":"xxxx@sunline.cn",
+			"status":"Y"
+			 },			 
+			 {
+			"register_cd":"2001",
+	        "branch_cd":"2001",
+			"user_cd" : "user_02",
+			"user_name" : "香り",
+			"user_certno":"08615056564321",
+			"user_telno":"13843666666666",
+			"user_email":"ZZzzZZzz@sunline.cn",
+			"status":"Y"
+			 }]
+			 }

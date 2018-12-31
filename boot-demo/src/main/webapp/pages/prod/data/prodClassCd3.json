@@ -1,0 +1,28 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+	    
+			"prod_cd" : "3",
+			"last_ver" : "01",
+			"abstract_cd" : "4",
+			"prod_name":"定活一号",
+			"merchant_cd":"中国银行",
+			"prod_setting":"",
+			"prod_status":"Y",
+			"last_upd_user":"userxxx",
+			"last_upd_dt":""
+		}, {
+         	"prod_cd" : "4",
+			"last_ver" : "02",
+			"abstract_cd" : "4",
+			"prod_name":"定活二号",
+			"merchant_cd":"中国银行",
+			"prod_setting":"",
+			"prod_status":"Y",
+			"last_upd_user":"userxxx",
+			"last_upd_dt":""
+		} 
+	]
+}

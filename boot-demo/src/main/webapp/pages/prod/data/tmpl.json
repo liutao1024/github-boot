@@ -1,0 +1,13 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+			"abstract_cd" : "1",
+			"abstract_name" : "理财"
+		}, {
+			"abstract_cd" : "2",
+			"abstract_name" : "定期"
+		}
+	]
+}

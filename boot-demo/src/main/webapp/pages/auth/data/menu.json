@@ -1,0 +1,324 @@
+{
+	"menu" : [{
+	        "menuid" : "10000",
+			"menuName" : "基础管理",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "Y",
+			"children" : [{
+			        "menuid" : "10001",
+					"menuName" : "人员管理",
+					"icon" : "fa fa-user",
+					"level" : 2,
+					"haschild" : "Y",
+			        "children" :  [{
+								        "menuid" : "100011",
+										"menuName" : "操作员管理",
+										"icon" : "",
+										"authUrl" : "/auth/user",
+										"level" : 3,
+										"haschild" : "N",
+										"parent":"人员管理"
+									},{ 
+									    "menuid" : "100012",
+										"menuName" : "角色管理",
+										"icon" : "",
+										"authUrl" : "/auth/role",
+										"level" : 3,
+										"haschild" : "N",
+										"parent":"人员管理"
+									}
+								],
+					"parent":"基础管理"
+				}, {
+				    "menuid" : "10002",
+					"menuName" : "机构管理",
+					"icon" : "fa fa-bank",
+					"authUrl" : "/auth/branch",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"基础管理"
+				}, {
+				    "menuid" : "10003",
+					"menuName" : "权限管理",
+					"icon" : "fa fa-key",
+					"authUrl" : "/auth/privilege",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"基础管理"
+				}, {
+				    "menuid" : "10004",
+					"menuName" : "应用管理",
+					"icon" : "fa fa-th",
+					"authUrl" : "/auth/appTree",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"基础管理"
+					
+				}, {
+				    "menuid" : "10005",
+					"menuName" : "设备管理",
+					"icon" : "fa fa-steam-square",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"基础管理"
+				}, {
+				    "menuid" : "10006",
+					"menuName" : "凭证管理",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"基础管理"
+				}
+			]
+		}, {
+		    "menuid" : "20000",
+			"menuName" : "产品管理",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "Y",
+			"children" : [{
+			        "menuid" : "20001",
+					"menuName" : "参数管理",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "Y",
+					"children" : [{
+					        "menuid" : "200011",
+							"menuName" : "期限",
+							"icon" : "",
+							"authUrl" : "/prod/period",
+							"level" : 3,
+							"haschild" : "N"
+						},{
+							"menuName" : "利率",
+							"icon" : "",
+							"authUrl" : "/prod/intr",
+							"level" : 3,
+							"haschild" : "N"
+						}
+					],
+					"parent":"产品管理"
+				},{
+				        "menuid" : "20002",
+					"menuName" : "产品配置",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "Y",
+					"parent":"产品管理",
+					"children" : [{
+					                "menuid" : "200021",
+							"menuName" : "产品信息",
+							"icon" : "",
+							"authUrl" : "/prod/prod",
+							"level" : 3,
+							"haschild" : "N"
+						},{
+						        "menuid" : "200022",
+							"menuName" : "产品模板",
+							"icon" : "",
+							"authUrl" : "/prod/tmpl",
+							"level" : 3,
+							"haschild" : "N"
+						},{
+						        "menuid" : "200023",
+							"menuName" : "商品信息",
+							"icon" : "",
+							"authUrl" : "/prod/comm",
+							"level" : 3,
+							"haschild" : "N"
+						},{
+						        "menuid" : "200024",
+							"menuName" : "产品仓库",
+							"icon" : "",
+							"authUrl" : "/prod/store",
+							"level" : 3,
+							"haschild" : "N"
+						}
+					]
+					
+				}, {
+				    "menuid" : "20003",
+					"menuName" : "产品发布",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"产品管理"
+				}, {
+				    "menuid" : "20004",
+					"menuName" : "营销特性",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"产品管理"
+				}
+			]
+		}, {
+		    "menuid" : "30000",
+			"menuName" : "信息管理",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "Y",
+			"children" : [{
+			        "menuid" : "30001",
+					"menuName" : "公告管理",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"信息管理"
+				}, {
+				    "menuid" : "30002",
+					"menuName" : "公共配置",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"信息管理"
+				}, {
+				    "menuid" : "30003",
+					"menuName" : "知识管理",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"信息管理"
+				}
+			]
+		}, {
+		    "menuid" : "40000",
+			"menuName" : "统计中心",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "Y",
+			"children" : [{
+			        "menuid" : "40001",
+					"menuName" : "产品统计",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"统计中心"
+				}, {
+				    "menuid" : "40002",
+					"menuName" : "人员统计",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"统计中心"
+				}, {
+				    "menuid" : "40003",
+					"menuName" : "客户统计",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"统计中心"
+				}
+			]
+		}, {
+		    "menuid" : "50000",
+			"menuName" : "客户经理管理",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "Y",
+			"children" : [{
+			        "menuid" : "50001",
+					"menuName" : "实时状态",
+					"icon" : "",
+					"authUrl" : "",
+					"level" : 2,
+					"haschild" : "N",
+					"parent":"客户经理管理"
+				}
+			]
+		}, {
+		    "menuid" : "60000",
+			"menuName" : "社区管理",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "N"
+		}, {
+		    "menuid" : "70000",
+			"menuName" : "系统管理",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "Y",
+			"children" :  [{
+								        "menuid" : "70001",
+										"menuName" : "字典管理",
+										"icon" : "",
+										"authUrl" : "/sys/dict",
+										"level" : 2,
+										"haschild" : "N",
+										"parent":"系统管理"
+									},
+							{
+								        "menuid" : "70002",
+										"menuName" : "币种管理",
+										"icon" : "",
+										"authUrl" : "/sys/ccy",
+										"level" : 2,
+										"haschild" : "N",
+										"parent":"系统管理"
+									}	,
+							{
+								        "menuid" : "70003",
+										"menuName" : "全局控制",
+										"icon" : "",
+										"authUrl" : "/sys/para",
+										"level" : 2,
+										"haschild" : "N",
+										"parent":"系统管理"
+									}		
+								]
+		},{"menuid" : "80000",
+			"menuName" : "日终管理",
+			"icon" : "",
+			"authUrl" : "",
+			"level" : 1,
+			"haschild" : "Y",
+			"children" :[{
+								        "menuid" : "80001",
+										"menuName" : "作业执行",
+										"icon" : "",
+										"authUrl" : "/dayend/jobrun",
+										"level" : 2,
+										"haschild" : "N",
+										"parent":"系统管理"
+									},
+							{
+								       "menuid" : "80002",
+										"menuName" : "作业定义",
+										"icon" : "",
+										"authUrl" : "/dayend/jobbatch",
+										"level" : 2,
+										"haschild" : "N",
+										"parent":"系统管理"
+									}	,
+							{
+								        "menuid" : "80003",
+										"menuName" : "作业批次",
+										"icon" : "",
+										"authUrl" : "/dayend/jobs",
+										"level" : 2,
+										"haschild" : "N",
+										"parent":"系统管理"
+									}]
+			}
+	]
+}

@@ -1,0 +1,18 @@
+{   "sEcho": 5,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data"  : [{
+	        "regist_cd" :"xxx总行",
+			"role_cd" : "1",
+			"role_name" : "超级管理员",
+			"parent_role_cd":"",
+			"rank":"1"
+			 },
+			 {
+			"regist_cd":"xxx总行",
+			"role_cd" : "2",
+			"role_name" : "系统管理员",
+			"parent_role_cd":"",
+			"rank":"1"
+			 }]
+			 }

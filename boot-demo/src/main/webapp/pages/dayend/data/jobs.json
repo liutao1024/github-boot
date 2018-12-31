@@ -1,0 +1,14 @@
+{   "sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+	        "job_cd":"01",
+	        "job_name":"menu_find",
+			"job_code" : "find:menu.find",
+			"job_type" : "1",
+			"mproc_field":"08615056564321",
+			"max_proc":"3",
+			"job_abort_flag":"N",
+			"ver":"1"
+			  }]
+			 }

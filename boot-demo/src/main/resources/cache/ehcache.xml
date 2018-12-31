@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd" -->
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false">
+
+	<diskStore path="java.io.tmpdir/ehcache" />
+
+	<cache name="defaultCache" maxElementsOnDisk="0"
+		maxElementsInMemory="100000" timeToIdleSeconds="3000" timeToLiveSeconds="6000"
+		eternal="true" overflowToDisk="true" diskPersistent="false" />
+	<cache name="menuCache" maxElementsOnDisk="0"
+		maxElementsInMemory="100000" timeToIdleSeconds="3000"
+		timeToLiveSeconds="6000" eternal="true" overflowToDisk="true"
+		diskPersistent="false" />
+	<cache name="dictCache" maxElementsOnDisk="0"
+		maxElementsInMemory="100000" timeToIdleSeconds="3000"
+		timeToLiveSeconds="6000" eternal="true" overflowToDisk="true"
+		diskPersistent="false" />
+</ehcache>

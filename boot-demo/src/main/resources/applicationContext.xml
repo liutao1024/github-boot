@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:p="http://www.springframework.org/schema/p"
+     xmlns:cache="http://www.springframework.org/schema/cache"
+     xmlns:aop="http://www.springframework.org/schema/aop"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans
+     	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+     	http://www.springframework.org/schema/context
+     	http://www.springframework.org/schema/context/spring-context-4.1.xsd
+     	http://www.springframework.org/schema/cache 
+     	http://www.springframework.org/schema/cache/spring-cache-4.1.xsd
+     	http://www.springframework.org/schema/aop 
+     	http://www.springframework.org/schema/aop/spring-aop-4.1.xsd"
+     	default-lazy-init="true">
+
+	<description>Spring公共配置</description>
+	
+	<!-- 注解配置 -->
+	<context:annotation-config />
+	
+	<!-- 使用annotation 自动注册bean,并检查@Required,@Autowired的属性已被注入 -->
+	<context:component-scan base-package="cn.sunline">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+	</context:component-scan>
+	
+	<!-- javamelody监控spring性能 -->
+	<!--bean id="facadeMonitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">
+		<property name="pointcut">
+			  <bean class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+				   <property name="pattern" value="cn.sunline.service.*" />
+			  </bean>
+		 </property>
+	</bean-->
+
+	
+	<!-- 定义aspectj -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+    <!-- 加载三种情况数据库配置 生成环境、测试环境、本地环境 -->
+	<context:property-placeholder
+		ignore-resource-not-found="true"
+		location="classpath:/jdbc.properties" />
+
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="driverClassName" value="${jdbc_driverClassName}" />
+		<property name="url" value="${jdbc_url}" />
+		<property name="username" value="${jdbc_username}" />
+		<property name="password" value="${jdbc_password}" />
+		<!-- 连接池最大使用连接数 -->
+		<property name="maxActive" value="20" />
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="1" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="60000" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="3" />
+		<!-- 自动清除无用连接 -->
+		<property name="removeAbandoned" value="true" />
+		<!-- 清除无用连接的等待时间 -->
+		<property name="removeAbandonedTimeout" value="600" />
+		<!-- 连接属性 -->
+		<property name="connectionProperties" value="clientEncoding=UTF-8;config.decrypt=false;" />
+		<!-- 配置ConfigFilter -->
+		<property name="filters" value="config"></property>
+	</bean>
+    
+    <!--import resource="spring-mybatis.xml" /--> 
+    <import resource="spring-cache.xml" /> 
+    <import resource="spring-jpa.xml" />
+	<!--import resource="spring-quartz.xml" /-->
+    
+</beans>

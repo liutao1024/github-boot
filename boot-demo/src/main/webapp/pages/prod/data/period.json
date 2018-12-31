@@ -1,0 +1,47 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 8,
+	"iTotalDisplayRecords" : 8,
+	"data" : [{
+			"period_cd" : "oneday",
+			"remark" : "一天",
+			"period_unit" : "D",
+			"period_value" : "1"
+		}, {
+			"period_cd" : "sevendays",
+			"remark" : "七天",
+			"period_unit" : "D",
+			"period_value" : "7"
+		}, {
+			"period_cd" : "onemonth",
+			"remark" : "一个月",
+			"period_unit" : "M",
+			"period_value" : "1"
+		}, {
+			"period_cd" : "threemonths",
+			"remark" : "三个月",
+			"period_unit" : "M",
+			"period_value" : "3"
+		}, {
+			"period_cd" : "sixmonths",
+			"remark" : "六个月",
+			"period_unit" : "M",
+			"period_value" : "6"
+		}, {
+			"period_cd" : "oneyear",
+			"remark" : "一年",
+			"period_unit" : "Y",
+			"period_value" : "1"
+		}, {
+			"period_cd" : "threeyears",
+			"remark" : "三年",
+			"period_unit" : "Y",
+			"period_value" : "3"
+		}, {
+			"period_cd" : "fiveyears",
+			"remark" : "五年",
+			"period_unit" : "Y",
+			"period_value" : "5"
+		}
+	]
+}

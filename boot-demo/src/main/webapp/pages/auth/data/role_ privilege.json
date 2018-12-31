@@ -1,0 +1,14 @@
+{
+	"role_privilege" : [{
+			"RolePID" : "1",
+			"RoleID" : "1",
+			"P_ID " : "2",
+			"Role_P_Remark":"角色RoleID 1具有权限P_ID 2"
+			 },
+			 {
+			"RolePID" : "2",
+			"RoleID" : "1",
+			"P_ID " : "2",
+			"Role_P_Remark":"角色RoleID 1具有权限P_ID 2"
+			 }]
+			 }

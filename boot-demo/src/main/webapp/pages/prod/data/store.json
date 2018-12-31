@@ -1,0 +1,21 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+			"prod_cd" : "1",
+			"ver" : "01",
+			"abstract_cd" : "理财",
+			"class_cd" : "5001",
+			"prod_name" : "日日发",
+			"merchant_cd" : "sunline"		
+		}, {
+			"prod_cd" : "1",
+			"ver" : "02",
+			"abstract_cd" : "理财",
+			"class_cd" : "5001",
+			"prod_name" : "日日发",
+			"merchant_cd" : "sunline"
+		}
+	]
+}

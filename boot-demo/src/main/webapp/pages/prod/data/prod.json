@@ -1,0 +1,33 @@
+{
+	"sEcho": 3,
+	"iTotalRecords" : 2,
+	"iTotalDisplayRecords" : 2,
+	"data" : [{
+	        "register_cd":"2001",
+			"prod_cd" : "1",
+			"last_ver" : "01",
+			"abstract_cd" : "1",
+			"busi_cd":"1",
+			"class_cd":"01",
+			"prod_name":"稳赢一号",
+			"merchant_cd":"中国银行",
+			"prod_setting":"",
+			"prod_status":"Y",
+			"last_upd_user":"userxxx",
+			"last_upd_dt":""
+		}, {
+		    "register_cd":"2001",
+			"prod_cd" : "2",
+			"last_ver" : "02",
+			"abstract_cd" : "2",
+			"busi_cd":"1",
+			"class_cd":"01",
+			"prod_name":"稳赢一号",
+			"merchant_cd":"中国银行",
+			"prod_setting":"",
+			"prod_status":"Y",
+			"last_upd_user":"userxxx",
+			"last_upd_dt":""
+		}
+	]
+}

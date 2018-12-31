@@ -1,0 +1,23 @@
+server.servlet.context-path=/helloboot
+server.port=8080
+
+## 配置jsp文件的位置，默认位置为：src/main/webapp
+#spring.mvc.view.prefix=/pages/
+## 配置jsp文件的后缀
+#spring.mvc.view.suffix=.jsp
+
+#配置返回jsp start
+#配置jsp文件的位置，默认位置为：src/main/webapp
+spring.mvc.view.prefix:/WEB-INF/jsp/
+#配置jsp文件的后缀
+spring.mvc.view.suffix:.jsp
+#配置返回jsp end
+
+server.tomcat.uri-encoding=UTF-8
+spring.http.encoding.charset=UTF-8
+spring.http.encoding.enabled=true
+spring.http.encoding.force=true
+spring.messages.encoding=UTF-8
+
+book.author=罗贯中
+book.name=三国演义
