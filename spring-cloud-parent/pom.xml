@@ -50,6 +50,17 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Finchley.SR2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 			<!-- mvn clean install 时跳过Test -->
@@ -73,12 +84,8 @@
 		</plugins>
 	</build>
 	<modules>
-		<module>spring-cloud-the-eureka1</module>
-		<module>spring-cloud-the-eureka2</module>
-		<module>spring-cloud-the-eureka3</module>
-		<module>spring-cloud-the-service1</module>
-		<module>spring-cloud-the-service2</module>
-		<module>spring-cloud-the-client1</module>
-		<module>spring-cloud-the-client2</module>
+		<module>spring-cloud-the-eureka</module>
+		<module>spring-cloud-the-service</module>
+		<module>spring-cloud-the-client</module>
 	</modules>
 </project>
