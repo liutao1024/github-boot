@@ -8,6 +8,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @ClassName: EurekaApplication 
  * @Description: TODO(Describe)
  * http://c.biancheng.net/view/5324.html
+ * http://localhost:8761/
  */
 @EnableEurekaServer
 @SpringBootApplication

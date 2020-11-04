@@ -23,21 +23,25 @@
 			<!-- <version>4.12</version> -->
 			<scope>test</scope>
 		</dependency>
-		<!-- eureka -->
+		<!-- eureka 服务端-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-		<!-- 添加spring-boot-devtools实现热部署功能 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-		<!-- 添加spring-boot-starter-actuator用于监控和管理自身应用信息的模块 -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-actuator</artifactId>
+		    <artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		<!-- 添加spring-boot-devtools实现热部署功能 -->
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency> -->
+		<!-- 添加spring-boot-starter-actuator用于监控和管理自身应用信息的模块 -->
+		<!-- <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency> -->
 	</dependencies>
 	<!-- Spring Cloud -->
 	<dependencyManagement>
