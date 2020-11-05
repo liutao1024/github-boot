@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>spring-cloud-the-eureka1</artifactId>
+  <packaging>jar</packaging>
   <name>spring-cloud-the-eureka1</name>
   <url>http://maven.apache.org</url>
   <dependencies>
