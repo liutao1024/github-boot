@@ -8,3 +8,6 @@ bin/
 .gitignore
 .springBeans
 *.log
+.gz
+.log
+*.gz
