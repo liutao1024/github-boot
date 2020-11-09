@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 public class BeanConfiguration {
 //	@LoadBalanced
 	@Bean
-	public RestTemplate getRestTemplate() {
+	public RestTemplate getRestTemplate() {//简单便捷的模板类来进行 API 的调用
 		return new RestTemplate();
 	}
 }
