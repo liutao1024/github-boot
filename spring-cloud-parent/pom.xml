@@ -59,14 +59,20 @@
 	</dependencyManagement>
 	<build>
 		<plugins>
-			<!-- mvn clean install 时跳过Test -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<skipTests>true</skipTests>
-				</configuration>
-			</plugin>
+			<!-- spring-boot-maven-plugin插件就是打包spring boot应用的 -->
+			<!-- 打包插件 -->
+	        <plugin>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-maven-plugin</artifactId>
+	            <configuration>
+	                <executable>true</executable>
+	                <!-- mainClass 配置的是我们的启动入口类,配置完成后可以通过 Maven的mvn clean package
+	                	 命令进行编译打包操作.编译完成后在 target 目录下会生成对应的 jar包
+	                	 部署的时候直接调用 java–jar xx.jar 即可启动应用
+	                 -->
+	                <mainClass>cn.spring.boot.BootApp</mainClass>
+	            </configuration>
+	        </plugin>
 			<!-- 指定mavne项目的jdk版本 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -75,6 +81,14 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<!-- mvn clean install 时跳过Test -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>true</skipTests>
 				</configuration>
 			</plugin>
 		</plugins>

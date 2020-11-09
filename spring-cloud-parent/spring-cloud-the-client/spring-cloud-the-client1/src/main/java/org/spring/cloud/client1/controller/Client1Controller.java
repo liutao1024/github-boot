@@ -14,6 +14,9 @@ import org.springframework.web.client.RestTemplate;
 public class Client1Controller {
 	private Logger logger = LoggerFactory.getLogger(Client1Controller.class);
 //	private static final String applicationName = "spring-cloud-the-service1";
+	/**
+	 * 整合Ribbon
+	 */
 	@Autowired
 	private RestTemplate restTemplate;
 	@Autowired
@@ -55,9 +58,11 @@ public class Client1Controller {
 	}
 	@GetMapping(value = "/sayhello2")
 	public String sayHello2() {
-		String result = restTemplate.getForObject("http://192.168.1.106:8081/sayhello", String.class);
-		logger.info(result);
-		return result;
+		String getResult = restTemplate.getForObject("http://192.168.1.106:8081/sayhello", String.class);
+		String postResult = restTemplate.postForObject("http://192.168.1.106:8081/sayhello", null, String.class);
+		logger.info(getResult);
+		logger.info(postResult);
+		return getResult;
 	}
 	/**
 	 * @Author LiuTao @Date 2020年11月5日 下午4:08:28 

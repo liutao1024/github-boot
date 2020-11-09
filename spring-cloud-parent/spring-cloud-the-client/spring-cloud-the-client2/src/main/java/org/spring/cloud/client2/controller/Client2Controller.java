@@ -32,23 +32,17 @@ public class Client2Controller {
 	}
 	
 
-	/**
-	 * @Author LiuTao @Date 2020年11月4日 上午11:21:45 
-	 * @Title: feignRequest 
-	 * @Description:  Feign 的方式调用服务接口
-	 * @return
-	 */
-//    @RequestMapping(value = "feignRequest")
-//    public Object feignRequest(){
-//    	logger.info("====================");
-//        String s = helloService.nice();
-//        return s;
-//    }
-//
-//    @RequestMapping(value = "commonRequest")
-//    public Object commonRequest(){
-//        String url = "http://"+ applicationName +"/hello";
-//        String s = restTemplate.getForObject(url,String.class);
-//        return s;
-//    }
+	@GetMapping(value = "/sayhello2")
+	public String sayHello2() {
+		String getResult = restTemplate.getForObject("http://192.168.1.106:8081/sayhello", String.class);
+		String postResult = restTemplate.postForObject("http://192.168.1.106:8081/sayhello", null, String.class);
+//		String putResult = restTemplate.put(url, request, uriVariables);
+//		String deleteResult = restTemplate.delete(url, uriVariables);
+//		String exchangeResult = restTemplate.exchange(url, method, requestEntity, responseType, uriVariables);
+//		String executeResult = restTemplate.execute(url, method, requestCallback, responseExtractor, uriVariables);
+//		String headForHeadersResult = restTemplate.headForHeaders(url, uriVariables);
+		logger.info(getResult);
+		logger.info(postResult);
+		return getResult;
+	}
 }
