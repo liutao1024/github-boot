@@ -25,11 +25,11 @@ public class Client2Application {
      * 这是 Spring Ribbon 的提供的能力
      * @return
      */
-    @LoadBalanced
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
+//	@Bean
+//    @LoadBalanced
+//    public RestTemplate restTemplate() {
+//        return new RestTemplate();
+//    }
     /**
      * @Author LiuTao @Date 2020年11月4日 上午9:42:24 
      * @Title: main 

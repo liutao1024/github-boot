@@ -24,11 +24,11 @@ public class Client2Controller {
 	@GetMapping("/article/callHello")
 	public String callHello() {
 		logger.info("====================");
-		return restTemplate.getForObject("http://localhost:8081/user/hello", String.class);
+		return restTemplate.getForObject("http://localhost:8081/hello", String.class);
 	}
 	@GetMapping("/article/callHello2")
 	public String callHello2() {
-		return restTemplate.getForObject("http://cloud-service/user/hello", String.class);
+		return restTemplate.getForObject("http://spring-cloud-the-service1/hello", String.class);
 	}
 	
 

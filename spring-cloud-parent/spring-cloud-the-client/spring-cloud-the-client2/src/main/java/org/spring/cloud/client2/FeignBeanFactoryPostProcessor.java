@@ -1,4 +1,4 @@
-package org.spring.cloud.client2.controller;
+package org.spring.cloud.client2;
 
 //import java.util.Arrays;
 //

@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class Service1Controller {
 	private Logger logger = LoggerFactory.getLogger(Service1Controller.class);
    
-	@Value("${server.port}")
+	@Value("${server.port}")//从配置文件中获取配置参数--tips
     String port;
 	@RequestMapping(value = "/sayhi")
     public String sayHi(@RequestParam(value = "name", defaultValue = "Spring") String name){
-    	return "Hi "+ name +", I am from " + port;
+    	return "Hi "+ name +", I am from Service1 " + port;
     }
 	
 	@RequestMapping(value = "/sayhello")
