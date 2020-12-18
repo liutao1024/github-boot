@@ -1,0 +1,23 @@
+server:
+  port: 8762
+      
+spring:
+  application:
+    name: eureka2
+#  profiles:
+#    active: eureka2
+  security:
+    user:
+      name: admin
+      password: admin123
+        
+eureka: 
+  instance: 
+    hostname: eureka2
+  client:
+#    由于注册中心的职责就是维护服务实例,它并不需要去检索服务,所以也设置为 false  
+    fetch-registry: false
+#    由于注册中心的职责就是维护服务实例,它并不需要去检索服务,所以也设置为 false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://admin:admin123@eureka1:8761/eureka/

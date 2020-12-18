@@ -1,0 +1,15 @@
+server:
+  port: 20002
+spring:
+  security: 
+    user:
+      name: admin
+      password: admin123  
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://admin:admin123@eureka1:20001/eureka/
