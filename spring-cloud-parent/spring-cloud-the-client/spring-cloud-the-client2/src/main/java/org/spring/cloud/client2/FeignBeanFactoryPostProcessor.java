@@ -8,6 +8,11 @@ package org.spring.cloud.client2;
 //import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 //import org.springframework.stereotype.Component;
 
+/**
+ * @Author LiuTao @Date 2020年12月21日 下午6:22:14
+ * @ClassName: FeignBeanFactoryPostProcessor 
+ * @Description: http://c.biancheng.net/view/5357.html
+ */
 //@Component
 public class FeignBeanFactoryPostProcessor/* implements BeanFactoryPostProcessor*/ {
 

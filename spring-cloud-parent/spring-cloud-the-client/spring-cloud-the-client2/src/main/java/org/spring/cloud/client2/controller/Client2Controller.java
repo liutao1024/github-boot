@@ -2,8 +2,12 @@ package org.spring.cloud.client2.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.spring.cloud.client2.HouseInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -49,5 +53,34 @@ public class Client2Controller {
 		logger.info(getResult);
 		logger.info(postResult);
 		return getResult;
+	}
+	
+	//
+	
+	@GetMapping("/call/data")
+	public HouseInfo getData(@RequestParam("name") String name) {
+	    return restTemplate.getForObject( "http://client2:8182/house/data?name="+ name, HouseInfo.class);
+	}
+	@GetMapping("/call/data/{name}")
+	public String getData2(@PathVariable("name") String name) {
+	    return restTemplate.getForObject( "http://client2:8182/house/data/{name}", String.class, name);
+	}
+	@GetMapping("/call/dataEntity")
+	public HouseInfo getDataEntity(@RequestParam("name") String name) {
+	    ResponseEntity<HouseInfo> responseEntity = restTemplate
+	            .getForEntity("http://client2:8182/house/data?name=" + name, HouseInfo.class);
+	    if (responseEntity.getStatusCodeValue() == 200) {
+	        return responseEntity.getBody();
+	    }
+	    return null;
+	}
+	@GetMapping("/call/save")
+	public Long add() {
+	    HouseInfo houseInfo = new HouseInfo();
+	    houseInfo.setLocaltion("上海");
+	    houseInfo.setAddress("浦东");
+	    houseInfo.setName("惠德新屯");
+	    Long id = restTemplate.postForObject("http://localhost:8081/house/save", houseInfo, Long.class);
+	    return id;
 	}
 }

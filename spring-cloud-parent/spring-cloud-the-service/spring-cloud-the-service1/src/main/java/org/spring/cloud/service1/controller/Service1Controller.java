@@ -24,7 +24,7 @@ public class Service1Controller {
 	
 	@RequestMapping(value = "/sayhello")
     public String sayHello() {
-        return "Service1 Controller Hello";
+        return "Service1Controller Hello";
     }
 	
 	@Autowired

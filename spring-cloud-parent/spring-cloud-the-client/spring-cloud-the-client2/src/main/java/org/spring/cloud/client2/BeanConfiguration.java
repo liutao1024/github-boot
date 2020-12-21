@@ -10,8 +10,9 @@ public class BeanConfiguration {
 
 	/**
      * 注入 RestTemplate 
-     * 并用 @LoadBalanced 注解，用负载均衡策略请求服务提供者
+     * 并用 @LoadBalanced 注解,用负载均衡策略请求服务提供者
      * 这是 Spring Ribbon 的提供的能力
+     * 增加@LoadBalanced能够让RestTemplate具备负载均衡能力
      * @return
      */
 	@Bean

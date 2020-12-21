@@ -35,7 +35,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-		<!-- 添加spring-boot-starter-actuator用于监控和管理自身应用信息的模块 -->
+		<!-- 添加spring-boot-starter-actuator用于监控和管理自身应用信息的模块 用于开启健康检查 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
