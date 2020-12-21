@@ -25,6 +25,10 @@ public class Client2Controller {
 	 * @Description: BeanConfiguration.java中不配置注解@LoadBalanced时callHello可调用,配置以后callHello2可调用
 	 * @return
 	 */
+	@GetMapping("/article/call")
+	public String call() {
+		return "This is Client2Controller.java";
+	}
 	@GetMapping("/article/callHello")
 	public String callHello() {
 		logger.info("====================");
@@ -80,7 +84,7 @@ public class Client2Controller {
 	    houseInfo.setLocaltion("上海");
 	    houseInfo.setAddress("浦东");
 	    houseInfo.setName("惠德新屯");
-	    Long id = restTemplate.postForObject("http://localhost:8081/house/save", houseInfo, Long.class);
+	    Long id = restTemplate.postForObject("http://client2:8182/house/save", houseInfo, Long.class);
 	    return id;
 	}
 }
