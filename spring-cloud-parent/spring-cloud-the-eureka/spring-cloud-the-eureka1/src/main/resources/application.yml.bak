@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: eureka
-  profiles:
-    active: eureka1
-  security:
-    user:
-      name: admin
-      password: admin123

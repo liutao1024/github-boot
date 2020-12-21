@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @Description: Eureka1启动类 
  * 
  * http://c.biancheng.net/view/5324.html
- * http://localhost:8761/
+ * http://eurek1:8761/&&http:eureka2:8762/
  */
 @SpringBootApplication
 @EnableEurekaServer
