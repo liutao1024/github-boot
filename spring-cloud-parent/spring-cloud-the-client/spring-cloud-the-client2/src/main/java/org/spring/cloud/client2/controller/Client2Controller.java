@@ -32,11 +32,11 @@ public class Client2Controller {
 	@GetMapping("/article/callHello")
 	public String callHello() {
 		logger.info("====================");
-		return restTemplate.getForObject("http://localhost:8081/hello", String.class);
+		return restTemplate.getForObject("http://service1:8081/hello", String.class);
 	}
 	@GetMapping("/article/callHello2")
 	public String callHello2() {
-		return restTemplate.getForObject("http://spring-cloud-the-service1/hello", String.class);
+		return restTemplate.getForObject("http://SERVICE1/hello", String.class);
 	}
 	
 	/**
@@ -84,7 +84,7 @@ public class Client2Controller {
 	    houseInfo.setLocaltion("上海");
 	    houseInfo.setAddress("浦东");
 	    houseInfo.setName("惠德新屯");
-	    Long id = restTemplate.postForObject("http://client2:8182/house/save", houseInfo, Long.class);
+	    Long id = restTemplate.postForObject("http://localhost:8182/house/save", houseInfo, Long.class);
 	    return id;
 	}
 }

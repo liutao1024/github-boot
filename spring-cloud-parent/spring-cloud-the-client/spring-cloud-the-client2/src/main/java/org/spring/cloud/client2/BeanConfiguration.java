@@ -7,7 +7,6 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class BeanConfiguration {
-
 	/**
      * 注入 RestTemplate 
      * 并用 @LoadBalanced 注解,用负载均衡策略请求服务提供者
