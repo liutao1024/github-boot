@@ -25,13 +25,13 @@ public class Client1RibbonService {
 	private RestTemplate restTemplate;
 	private Logger logger = LoggerFactory.getLogger(Client1RibbonService.class);
 
-	public String sayhi(String name) {
-		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayhi?name=" + name, String.class);
+	public String sayHi(String name) {
+		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayHi?name=" + name, String.class);
 		logger.info(result);
 		return result;
 	}
-	public String sayhello() {
-		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayhello", String.class);
+	public String sayHello() {
+		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayHello", String.class);
 		logger.info(result);
 		return result;
 	}

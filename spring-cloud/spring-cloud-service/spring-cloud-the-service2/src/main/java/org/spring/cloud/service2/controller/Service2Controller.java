@@ -17,12 +17,12 @@ public class Service2Controller {
    
 	@Value("${server.port}")//从配置文件中获取配置参数--tips
     String port;
-	@RequestMapping(value = "/sayhi")
+	@RequestMapping(value = "/sayHi")
     public String sayHi(@RequestParam(value = "name", defaultValue = "Spring") String name){
     	return "Hi "+ name +", I am from Service2 " + port;
     }
 	
-	@RequestMapping(value = "/sayhello")
+	@RequestMapping(value = "/sayHello")
     public String sayHello() {
         return "Service2Controller Hello";
     }
@@ -43,7 +43,7 @@ public class Service2Controller {
     public String nice(){
         List<String> services = discoveryClient.getServices();
         for(String s : services){
-        	logger.info("gogogo " + s);
+        	logger.info("nice to meet you " + s);
         }
         return "nice to meet you!";
     }

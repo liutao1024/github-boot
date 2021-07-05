@@ -29,9 +29,9 @@ public class Client1Controller {
 	 * @param name
 	 * @return
 	 */
-	@GetMapping(value = "/sayhi")
+	@GetMapping(value = "/sayHi")
 	public String sayHi(@RequestParam String name) {
-		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayhi?name="+name, String.class);
+		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayHi?name="+name, String.class);
 		logger.info(result);
 		return result;
 	}
@@ -44,7 +44,7 @@ public class Client1Controller {
 	 */
 	@GetMapping(value = "/sayHi2")
 	public String sayHi2(@RequestParam String name) {
-		return client1RibbonService.sayhi(name);
+		return client1RibbonService.sayHi(name);
 	}
 	/**
 	 * @Author LiuTao @Date 2020年11月5日 下午4:08:11 
@@ -52,14 +52,14 @@ public class Client1Controller {
 	 * @Description: TODO(Describe) 
 	 * @return
 	 */
-	@GetMapping(value = "/saHello")
+	@GetMapping(value = "/sayHello")
 	public String sayHello() {
-		return client1RibbonService.sayhello();
+		return client1RibbonService.sayHello();
 	}
 	@GetMapping(value = "/sayHello2")
 	public String sayHello2() {
-		String getResult = restTemplate.getForObject("http://192.168.1.106:8081/sayhello", String.class);
-		String postResult = restTemplate.postForObject("http://192.168.1.106:8081/sayhello", null, String.class);
+		String getResult = restTemplate.getForObject("http://192.168.0.101:8081/sayHello", String.class);
+		String postResult = restTemplate.postForObject("http://192.168.0.101:8081/sayHello", null, String.class);
 		logger.info(getResult);
 		logger.info(postResult);
 		return getResult;
@@ -89,7 +89,7 @@ public class Client1Controller {
 	
 	@Autowired
 	private Client1FeignService client1FeignService;
-	@GetMapping(value = "/sayhi3")
+	@GetMapping(value = "/sayHi3")
 	public String sayHi3(@RequestParam String name) {
 		String result = this.client1FeignService.sayHiFromServiceOne(name);
 		return result;

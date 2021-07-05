@@ -2,7 +2,7 @@ package org.spring.cloud.client2;
 
 public class HouseInfo {
 	private long number;
-	private String localtion;
+	private String location;
 	private String address;
 	private String name;
 	
@@ -13,14 +13,14 @@ public class HouseInfo {
 	 * <p>Title: </p> 
 	 * <p>Description: </p> 
 	 * @param number
-	 * @param localtion
+	 * @param location
 	 * @param address
 	 * @param name
 	 */
-	public HouseInfo(long number, String localtion, String address, String name) {
+	public HouseInfo(long number, String location, String address, String name) {
 		super();
 		this.number = number;
-		this.localtion = localtion;
+		this.location = location;
 		this.address = address;
 		this.name = name;
 	}
@@ -31,11 +31,11 @@ public class HouseInfo {
 	public void setNumber(long number) {
 		this.number = number;
 	}
-	public String getLocaltion() {
-		return localtion;
+	public String getLocation() {
+		return location;
 	}
-	public void setLocaltion(String localtion) {
-		this.localtion = localtion;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 	public String getAddress() {
 		return address;

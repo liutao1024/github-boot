@@ -47,8 +47,8 @@ public class Client2Controller {
 	 */
 	@GetMapping(value = "/sayhello2")
 	public String sayHello2() {
-		String getResult = restTemplate.getForObject("http://192.168.1.106:8081/sayhello", String.class);
-		String postResult = restTemplate.postForObject("http://192.168.1.106:8081/sayhello", null, String.class);
+		String getResult = restTemplate.getForObject("http://192.168.1.106:8081/sayHello", String.class);
+		String postResult = restTemplate.postForObject("http://192.168.1.106:8081/sayHello", null, String.class);
 //		String putResult = restTemplate.put(url, request, uriVariables);
 //		String deleteResult = restTemplate.delete(url, uriVariables);
 //		String exchangeResult = restTemplate.exchange(url, method, requestEntity, responseType, uriVariables);
@@ -81,7 +81,7 @@ public class Client2Controller {
 	@GetMapping("/call/save")
 	public Long add() {
 	    HouseInfo houseInfo = new HouseInfo();
-	    houseInfo.setLocaltion("上海");
+	    houseInfo.setLocation("上海");
 	    houseInfo.setAddress("浦东");
 	    houseInfo.setName("惠德新屯");
 	    Long id = restTemplate.postForObject("http://client2:8182/house/save", houseInfo, Long.class);
