@@ -19,12 +19,12 @@ public class Service1Controller {
     String port;
 	@RequestMapping(value = "/sayhi")
     public String sayHi(@RequestParam(value = "name", defaultValue = "Spring") String name){
-    	return "Hi " + name + ", I am Service1 from " + port;
+    	return "Hi "+ name +", I am from Service1 " + port;
     }
 	
 	@RequestMapping(value = "/sayhello")
     public String sayHello() {
-        return "Service1: Hello I am Service1Controller";
+        return "Service1Controller Hello";
     }
 	
 	@Autowired
@@ -36,7 +36,7 @@ public class Service1Controller {
         for(String s : services){
         	logger.info(s);
         }
-        return "Service1: Hello spring cloud!";
+        return "hello spring cloud!";
     }
 
     @RequestMapping(value = "/nice")
@@ -45,6 +45,6 @@ public class Service1Controller {
         for(String s : services){
         	logger.info("gogogo " + s);
         }
-        return "Service1: nice to meet you!";
+        return "nice to meet you!";
     }
 }

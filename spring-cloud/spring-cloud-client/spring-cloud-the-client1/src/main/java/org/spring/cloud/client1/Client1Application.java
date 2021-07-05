@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages="org.spring.cloud.client1.server")//若Feign接口和启动类不在同一个包名下,需指定扫描的包名
+@EnableFeignClients
 public class Client1Application {
 	/**
      * 注入 RestTemplate 

@@ -22,7 +22,7 @@ eureka:
 
 #自定义log日志输出20201104
 logging:
-  path: /Users/jackie/workspace/rome/logs/
+  path: /Users/jackie/workspace/rome/
   file: eureka2.log
   level:
     root: INFO

@@ -1,4 +1,4 @@
-package org.spring.cloud.client1.server;
+package org.spring.cloud.client1.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,27 +20,27 @@ import org.springframework.web.client.RestTemplate;
  */
 
 @Service
-public class Client1RibbonServer {
+public class Client1RibbonService {
 	@Autowired
 	private RestTemplate restTemplate;
-	private Logger logger = LoggerFactory.getLogger(Client1RibbonServer.class);
+	private Logger logger = LoggerFactory.getLogger(Client1RibbonService.class);
 
 	public String sayhi(String name) {
-		String result = restTemplate.getForObject("http://service1/sayhi?name=" + name, String.class);
+		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayhi?name=" + name, String.class);
 		logger.info(result);
 		return result;
 	}
 	public String sayhello() {
-		String result = restTemplate.getForObject("http://service1/sayhello", String.class);
+		String result = restTemplate.getForObject("http://spring-cloud-the-service1/sayhello", String.class);
 		logger.info(result);
 		return result;
 	}
 	public String hello(){
-		String result = restTemplate.getForObject("http://service1/hello", String.class);
+		String result = restTemplate.getForObject("http://spring-cloud-the-service1/hello", String.class);
 		return result;
 	}
 	public String nice(){
-		String result = restTemplate.getForObject("http://service1/nice", String.class);
+		String result = restTemplate.getForObject("http://spring-cloud-the-service1/nice", String.class);
 		return result;
 	}
 }
