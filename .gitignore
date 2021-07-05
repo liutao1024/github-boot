@@ -10,4 +10,7 @@ bin/
 *.log
 .gz
 .log
+logs/
 *.gz
+.idea/
+*.iml
